@@ -4,7 +4,7 @@
 //    Description: A skiing game for Gamebuino and MAKERbuino.
 //        Version: 1.0.0
 //           Date: 19 Mar 2018
-//        License: GPLv3 (see LICENSE.md)
+//        License: GPLv3 (see LICENSE)
 //
 //    Skibuino Copyright (C) 2018 Mike Del Pozzo
 //    This program is free software: you can redistribute it and/or modify
