@@ -23,4 +23,8 @@ Avoid obstacles by using **Left** and **Right** to ski to the left and right. Ho
 
 ### License
 
-Skibuino Copyright (C) 2018 Mike Del PozzoThis program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.See [LICENSE](LICENSE) for details.
+Skibuino Copyright (C) 2018 Mike Del Pozzo
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or any later version.
+
+See [LICENSE](LICENSE) for details.
