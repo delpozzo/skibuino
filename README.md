@@ -2,7 +2,9 @@
 
 ## About
 
-A skiing game for [Gamebuino Classic](http://gamebuino.com) and [MAKERbuino](http://makerbuino.com/).![Screenshot](src/skibuino.gif?raw=true)
+A skiing game for [Gamebuino Classic](http://gamebuino.com) and [MAKERbuino](http://makerbuino.com/).
+
+![Screenshot](src/skibuino.gif?raw=true)
 
 ## Installation
 
