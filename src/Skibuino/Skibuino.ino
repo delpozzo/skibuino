@@ -87,7 +87,7 @@ void setup()
 // Main game loop
 void loop()
 {
-  if (gb.update())
+  if(gb.update())
   {
     thinkAll(); // call each entity's think function
     updateCamera(); // center camera on player
@@ -254,19 +254,19 @@ void playSound(const int *snd, byte channel)
 // Initializes EntityList[] with default values, sets pointers to NULL
 void initEntities()
 {
-  for (int i = 0; i < MAXENTS; i++)
+  for(int i = 0; i < MAXENTS; i++)
   {
     EntityList[i].used = 0;
     EntityList[i].rotation = NOROT;
     EntityList[i].flip = NOFLIP;
     EntityList[i].think = NULL;
 
-    for (int j = 0; j < MAXFRAMES; j++)
+    for(int j = 0; j < MAXFRAMES; j++)
     {
       EntityList[i].sprite[j] = NULL;
     }
 
-    for (int k = 0; k < MAXFLAGS; k++)
+    for(int k = 0; k < MAXFLAGS; k++)
     {
       EntityList[i].flag[k] = 0;
     }
@@ -277,9 +277,9 @@ void initEntities()
 // Returns NULL if the EntityList is full, this happens if MAXENTS is reached
 Entity* spawnEntity()
 {
-  for (int i = 0; i < MAXENTS; i++)
+  for(int i = 0; i < MAXENTS; i++)
   {
-    if (EntityList[i].used == false)
+    if(EntityList[i].used == false)
     {
       EntityList[i].used = true;
       return &EntityList[i];
@@ -291,9 +291,9 @@ Entity* spawnEntity()
 // Calls the think function that is set for each active entity in the EntityList[]
 void thinkAll()
 {
-  for (int i = 0; i < MAXENTS; i++)
+  for(int i = 0; i < MAXENTS; i++)
   {
-    if (EntityList[i].used && EntityList[i].think != NULL)
+    if(EntityList[i].used && EntityList[i].think != NULL)
     {
       EntityList[i].think(&EntityList[i]);
     }
@@ -306,7 +306,7 @@ void freeEntity(Entity *ent)
   ent->used = false;
   ent->think = NULL;
 
-  for (int i = 0; i < MAXFRAMES; i++)
+  for(int i = 0; i < MAXFRAMES; i++)
   {
     ent->sprite[i] = NULL;
   }
@@ -315,7 +315,7 @@ void freeEntity(Entity *ent)
 // Frees all entities in the EntityList[]
 void clearEntities()
 {
-  for (int i = 0; i < MAXENTS; i++)
+  for(int i = 0; i < MAXENTS; i++)
   {
     freeEntity(&EntityList[i]);
   }
@@ -324,11 +324,11 @@ void clearEntities()
 // Draws the current sprite frame for each active entity in the EntityList[]
 void drawAll()
 {
-  for (int i = 0; i < MAXENTS; i++)
+  for(int i = 0; i < MAXENTS; i++)
   {
-    if (EntityList[i].used)
+    if(EntityList[i].used)
     {
-      if (EntityList[i].sprite[EntityList[i].frame] != NULL)
+      if(EntityList[i].sprite[EntityList[i].frame] != NULL)
       {
         gb.display.drawBitmap(EntityList[i].x - cameraX, EntityList[i].y - cameraY, EntityList[i].sprite[EntityList[i].frame], EntityList[i].rotation, EntityList[i].flip);
       }
@@ -346,15 +346,15 @@ void initCamera()
 // Centers the camera position on the player
 void updateCamera()
 {
-  if (!player->used) return;
+  if(!player->used) return;
 
   cameraX = player->x - CAMERAXOFFSET;
-  if (cameraX < 0) cameraX = 0;
-  if (cameraX > (MAPWIDTH - LCDWIDTH)) cameraX = MAPWIDTH - LCDWIDTH;
+  if(cameraX < 0) cameraX = 0;
+  if(cameraX > (MAPWIDTH - LCDWIDTH)) cameraX = MAPWIDTH - LCDWIDTH;
 
   cameraY = player->y - CAMERAYOFFSET;
-  if (cameraY < 0) cameraY = 0;
-  if (cameraY > (MAPHEIGHT - LCDHEIGHT)) cameraY = MAPHEIGHT - LCDHEIGHT;
+  if(cameraY < 0) cameraY = 0;
+  if(cameraY > (MAPHEIGHT - LCDHEIGHT)) cameraY = MAPHEIGHT - LCDHEIGHT;
 }
 
 // ######################################################
@@ -364,7 +364,7 @@ void updateCamera()
 Entity* spawnPlayer(int x, int y)
 {
   Entity *self = spawnEntity();
-  if (self == NULL) return NULL;
+  if(self == NULL) return NULL;
 
   self->think = playerThink;
   self->x = x;
@@ -585,7 +585,7 @@ void clearObstacles()
 Entity* spawnLargeTree(int x, int y)
 {
   Entity *self = spawnEntity();
-  if (self == NULL) return NULL;
+  if(self == NULL) return NULL;
 
   self->think = treeThink;
   self->x = x;
