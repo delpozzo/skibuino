@@ -26,7 +26,7 @@
 #define MAXENTS 32 // maximum number of entities that can exist at one time
 #define MAXFRAMES 4 // maximum number of sprites per entity
 #define MAXFLAGS 4 // maximum number of flags per entity
-#define MAPWIDTH 128 // map width
+#define MAPWIDTH 192 // map width
 #define MAPHEIGHT 256 // map height
 #define CAMERAXOFFSET LCDWIDTH/2 // camera X offset
 #define CAMERAYOFFSET (LCDHEIGHT/2) + 10 // camera Y offset
