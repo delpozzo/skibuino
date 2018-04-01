@@ -2,7 +2,7 @@
 //          Title: Skibuino
 //         Author: Mike Del Pozzo
 //    Description: A skiing game for Gamebuino and MAKERbuino.
-//        Version: 1.0.0
+//        Version: 1.0.1
 //           Date: 19 Mar 2018
 //        License: GPLv3 (see LICENSE)
 //
